@@ -1,0 +1,122 @@
+<html>
+    <head>
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                margin: 0;
+                height: 100%;
+            }
+
+            body {
+                background-image: url("bg.svg");
+                background-size: auto 800px;
+                overflow: hidden;
+                animation: animatedBackground 10s ease-in-out infinite;
+                animation-direction: alternate;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 800;
+                font-size: 3.5vh;
+            }
+
+            #logo-sign {
+                background-repeat: no-repeat;
+                width: 90%;
+                height: 60%;
+                margin: 0 auto;
+                position: absolute;
+                bottom: -10;
+                left: 0;
+                right: 0;
+                background-position: bottom;
+                display: flex;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            #app-store-badges {
+                z-index: 100000000;
+                width:100%;
+                position:fixed;
+                bottom:0px;
+                text-align:center;
+                margin-bottom: 10vh;
+            }
+
+            .badge {
+                height: 10vh;
+                border-radius: 20px;
+                padding-left: 3vh;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+                padding-right: 3vh;
+            }
+
+
+            @keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 0; }
+}
+
+
+            #logo-sign img {
+                display: inline-block;
+                align-self: flex-start;
+                animation: rotate 3s infinite;
+                transform: rotate(-2deg);
+                animation-direction: alternate;
+                margin: 0 auto;
+                max-height: 200%;
+            }
+
+            #teaser-text-container {
+                margin-top: 10%;
+                text-align: center;
+            }
+
+            .teaser-text {
+                max-width: 1000px;
+                text-align: center;
+                border-radius: 20px;
+                border: 10px solid black;
+                display: inline-block;
+                background-color: #fff;
+                padding: 2vh;
+                margin-left: 5vh;
+                margin-right: 5vh;
+            }
+
+            .make-it-red {
+                color: rgb(255, 45, 45);
+            }
+
+            .make-it-yellow {
+                color: rgb(255,214,0);
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(-2deg)
+                }
+                100% {
+                    transform: rotate(2deg)
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="teaser-text-container">
+            <div class="teaser-text">
+                Do the things you love, or learn something new, with the folks in your town.
+            </div>
+        </div>
+        <div id="logo-sign">
+            <img src="logo-sign.svg">
+        </div>
+
+        <div id="app-store-badges">
+            <div class="teaser-text">
+                Coming soon to <span class="make-it-red">iOS</span> and <span class="make-it-red">Android</span>!
+            </div>
+        </div>
+    </body>
+</html>
